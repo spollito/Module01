@@ -4,14 +4,19 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Vehicle myVehicle = new Vehicle(4, "Blue", 5, "EV");
+        System.out.println("Number of Wheels: " + myVehicle.getNumberOfWheels());
+        System.out.println("Color: " + myVehicle.getColor());
+        System.out.println("Engine Size: " + myVehicle.getEngineSize());
+        System.out.println("Fuel Type: " + myVehicle.getFuelType());
+        System.out.println("");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Car myCar = new Car(4, "Red", 5, "EV", "Hyundai");
+        myCar.displayInfo();
+        myCar.honk();
+
+
+
     }
+
 }
